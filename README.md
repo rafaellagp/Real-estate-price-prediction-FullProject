@@ -8,8 +8,8 @@ The project in 4 steps: (1) Scraping data from the immoweb.com website, (2) clea
 
 
 1.	Collecting Data
-The Mission
-First task is to build a dataset gathering information about at least 10.000 properties all over Belgium. Use a Python library to collect as much data as possible. 
+
+Dataset gathering information about at least 10.000 properties all over Belgium.
 
 Libraries: BeautifulSoup, Selenium and Pandas 
 
@@ -31,13 +31,13 @@ The dataset have following infos:
 
 2.	Data Cleaning and exploratory analysis
 
-The Mission
-
 Step 1 : Data Cleaning
-A cleaned dataset that doesn't contain any duplicates, blank spaces or error-free. No duplicates
+
+A dataset that doesn't contain any duplicates, blank spaces or error-free. No duplicates
 Extra: a dataset with latitude and longitude was collected and merged into the main database to have a more accurate model.
 
 Step 2 : Exploratory Data Analysis
+
 On this step the following points were explored with vizualization when appropriate:
 •	Structure of the data (rows and columns)
 •	Correlation between the variables to each other and to price.
@@ -48,10 +48,8 @@ Libraries:  matplotlib, seaborn, plotly, pandas, numpy
 
 3.	Machine Learning Models
 
-The Mission
-
-Create a machine learning model to predict prices on Belgium's real estate sales.
-Take the dataset that was previously scraped, preprocessed and analyzed. Preprocess the data to be used with machine learning: handle NANs, handle categorical data, select features and remove features that have too strong correlation.
+Machine learning models to predict prices on Belgium's real estate sales.
+With the dataset that was previously scraped, preprocessed and analyzed, preprocess the data to be used with machine learning. Handle NANs, handle categorical data, select features and remove features that have too strong correlation.
 
 Step 1 : Data formatting
 
@@ -64,8 +62,6 @@ The following algorithms were tested: Random Forest Regression (0.82), Gradient 
 Random forest Regression and the Gradient Boosting Regressor are the models with best Scores. Gradient Boosting Regressor was chosen to be used in the API.
 
 4.	API deployment
-
-The Mission
 
 Deploy an API to Render with Docker that web-developers could create a website around it. Get data in JSON format and to return the data in the same format and provide an error if something went wrong.
 
