@@ -1,4 +1,4 @@
-# Immo Eliza - FullProject
+# Immo Eliza - Full Project
 ## API to predict the price of real estate sales in Belgium.
 
 Project created in the Bootcamp AI Operator at BeCode. October - 2022
