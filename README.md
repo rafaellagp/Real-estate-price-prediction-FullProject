@@ -1,10 +1,8 @@
 # Real estate price prediction in Belgium - FullProject
 ## API to predict the price real estate in sales in Belgium.
-Immo Eliza Full Project - Complete pipeline of Real Estate price prediction. 
+Immo Eliza Full Project 
 
 Project created in the Bootcamp AI Operator at BeCode. October - 2022
-
-
 
 The project in 4 steps: (1) Scraping data from the immoweb.com website, (2) clean data and exploratory analysis, (3) explore machine learning models to select the best performance and finally (4) deploy the API in docker render.
 
@@ -12,8 +10,10 @@ The project in 4 steps: (1) Scraping data from the immoweb.com website, (2) clea
 1.	Collecting Data
 The Mission
 First task is to build a dataset gathering information about at least 10.000 properties all over Belgium. Use a Python library to collect as much data as possible. 
+
 Libraries: BeautifulSoup, Selenium and Pandas 
-This dataset should have following:
+
+The dataset have following infos:
 •	Locality
 •	Type of property (House/apartment)
 •	Price
@@ -29,45 +29,50 @@ This dataset should have following:
 •	Swimming pool (Yes/No)
 •	State of the building (New, to be renovated, ...)
 
-
 2.	Data Cleaning and exploratory analysis
 
-
-•	Be able to use pandas.
-•	Be able to use Data visualization libraries.(matplotlib or seaborn).
-•	Be able to clean a dataset for analysis.
-•	Be able to use colors in visualizations correctly.
-•	Be able to establish conclusions about a dataset.
-•	Be able to find and answer creative questions about data.
-•	Be able to think outside the box.
 The Mission
+
 Step 1 : Data Cleaning
 A cleaned dataset that doesn't contain any duplicates, blank spaces or error-free. No duplicates
 Extra: a dataset with latitude and longitude was collected and merged into the main database to have a more accurate model.
+
 Step 2 : Exploratory Data Analysis
 On this step the following points were explored with vizualization when appropriate:
 •	Structure of the data (rows and columns)
 •	Correlation between the variables to each other and to price.
 •	Which variables have the greatest and least influence on the price.
 •	Percentage of missing values per column and resolve this problem
+
 Libraries:  matplotlib, seaborn, plotly, pandas, numpy
 
 3.	Machine Learning Models
+
 The Mission
+
 Create a machine learning model to predict prices on Belgium's real estate sales.
 Take the dataset that was previously scraped, preprocessed and analyzed. Preprocess the data to be used with machine learning: handle NANs, handle categorical data, select features and remove features that have too strong correlation.
+
 Step 1 : Data formatting
-Now that the dataset is ready, you have to format it for machine learning:
+
 Dataset was divided for training and testing. (X_train, y_train, X_test, y_test) to apply the models, and to try a better performance the dataset was also divided with only Houses or Apartments.
+
 Step 2: Model evaluation
+
 The following algorithms were tested: Random Forest Regression (0.82), Gradient Boosting Regressor (0.81), Decision Tree (0.66), Support Vector Regressor (0.52), Lasso model (0.44), Ridge Model (0.44), Bayesian Model (0.44), Elastic Net model (0.44), Multiple Linear Regression (0.37) and Suport Vector Machine Model (0.035).
+
 Random forest Regression and the Gradient Boosting Regressor are the models with best Scores. Gradient Boosting Regressor was chosen to be used in the API.
 
 4.	API deployment
+
 The Mission
+
 Deploy an API to Render with Docker that web-developers could create a website around it. Get data in JSON format and to return the data in the same format and provide an error if something went wrong.
+
 Step 1: Create a API to process the input and output data
+
 This module contains all the code to preprocess the data and the ML model to predict the price of a house, a route with GET request and return "alive" if the server is alive and a route with POST request that receives the data of a house in JSON format.
+
 Input
 {
   "data": {
@@ -97,3 +102,5 @@ Output
 }
 
 Step 2: Create a Dockerfile to wrap your API and deploy your Docker image in Render.com
+
+
