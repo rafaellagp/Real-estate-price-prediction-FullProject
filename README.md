@@ -1,6 +1,5 @@
-# Real estate price prediction in Belgium - FullProject
-## API to predict the price real estate in sales in Belgium.
-Immo Eliza Full Project 
+# ImmoELiza - FullProject
+## API to predict the price of real estate sales in Belgium.
 
 Project created in the Bootcamp AI Operator at BeCode. October - 2022
 
